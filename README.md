@@ -33,9 +33,9 @@ IM UIKit 提供了多个 UI 组件，您可以自行选择并组合，内部管�
 ## 配置项目
 
 // 请到下面路径的文件配置 appkey、account、token
-// src/App.vue
 
 ```javascript
+// src/App.vue
 this.init({
   appkey: "", // 请填写你的 appkey
   account: "", // 请填写你的 account
