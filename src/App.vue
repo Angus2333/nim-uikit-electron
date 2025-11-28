@@ -32,7 +32,7 @@ export default {
         ?.login(opts.account, opts.token, {})
         .then(() => {
           // IM 登录成功后跳转到会话页面
-          this.$router.push("/chat");
+          // this.$router.push("/chat");
           this.showUiKit = true;
         })
         .catch((error) => {
@@ -53,7 +53,7 @@ export default {
       const loginInfo = localStorage.getItem(STORAGE_KEY);
       // 未登录，跳转到登录页
       if (!loginInfo) {
-        this.$router.push("/login");
+        // this.$router.push("/login");
         this.showUiKit = true;
         return;
         // 已登录，跳转到会话页面
@@ -70,7 +70,7 @@ export default {
           console.error("解析登录信息失败", error);
           // 登录信息无效，清除并跳转到登录页
           localStorage.removeItem(STORAGE_KEY);
-          this.$router.push("/login");
+          // this.$router.push("/login");
         }
       }
     },
@@ -78,9 +78,9 @@ export default {
   mounted() {
     // 检查登录状态
     this.init({
-      appkey: "3e215d27b6a6a9e27dad7ef36dd5b65c", // 请填写你的appkey
-      account: "364386148798720", // 请填写你的account
-      token: "6accb0b5-457e-4489-bbff-a2dcf9f158ba", // 请填写你的token
+      appkey: "", // 请填写你的appkey
+      account: "", // 请填写你的account
+      token: "", // 请填写你的token
     });
   },
 };
